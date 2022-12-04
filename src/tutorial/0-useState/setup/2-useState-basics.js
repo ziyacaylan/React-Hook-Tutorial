@@ -9,7 +9,11 @@ const UseStateBasics = () => {
   const [text, setText] = useState("Rasgele başlık");
 
   const handleClick = () => {
-    setText("Başlık Değişti");
+    if (text === "Rasgele başlık") {
+      setText("Selam millet...!");
+    } else {
+      setText("Rasgele başlık");
+    }
   };
 
   return (
