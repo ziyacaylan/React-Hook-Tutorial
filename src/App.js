@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/5-useReducer/setup/index";
+import Setup from "./tutorial/8-custom-hooks/setup/1-fetch-example";
 function App() {
   return (
     <div className="container">
