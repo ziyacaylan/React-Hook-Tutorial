@@ -14,12 +14,13 @@ const ControlledInputs = () => {
     event.preventDefault();
     if (name && email) {
       console.log("formu Gönder");
-      const person = { name, email };
+      const person = { id: new Date().getTime().toString(), name, email };
+      console.log(person);
       setPeople((people) => {
         return [...people, { name, email }];
       });
-      console.log(person);
-      console.log(people);
+      setName("");
+      setEmail("");
     } else {
       console.log("boş değerler");
     }
@@ -52,6 +53,15 @@ const ControlledInputs = () => {
             Kişi EKLE
           </button>
         </form>
+        {people.map((person) => {
+          const { id, name, email } = person;
+          return (
+            <div className="item" key={id}>
+              <h4>{name}</h4>
+              <p>{email}</p>
+            </div>
+          );
+        })}
       </article>
     </>
   );
