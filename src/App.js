@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/3-forms/setup/2-multiple-inputs";
+import Setup from "./tutorial/5-useReducer/setup/index";
 function App() {
   return (
     <div className="container">
